@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import { Navbar } from "@/components/navbar/Navbar";
 
 interface Props {
   description?: string;
@@ -23,6 +24,7 @@ const { title, description } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
+    <Navbar client:load transition:persist="true" />
     <slot />
     <style is:global>
       @font-face {
@@ -63,7 +65,8 @@ const { title, description } = Astro.props;
       h3,
       h4,
       h5,
-      h6 {
+      h6,
+      a {
         font-family: "confortaa-regular";
       }
       h1 {

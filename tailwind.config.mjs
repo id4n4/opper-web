@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#00cc99",
+        // primary: "#00cc99",
+        primary: "#0b8f42",
         secondary: "#72757e",
         tertiary: "#bfbab7",
         background: "#16161a",
@@ -15,6 +16,9 @@ export default {
         stroke: "#010101",
         main: "#fffffe",
         cardBackground: "#242629",
+        customDarkBgTransparent: "rgb(31, 32, 35, 0.7)",
+        customDarkBgTransparentDarker: "rgb(0,0,0,0.5)",
+        customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)",
       },
     },
   },
