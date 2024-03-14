@@ -1,0 +1,102 @@
+---
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import reactIcon from "@/assets/img/react.svg";
+import djangoIcon from "@/assets/img/django.svg";
+import nestjsIcon from "@/assets/img/nestjs.svg";
+import nodejsIcon from "@/assets/img/nodejs.svg";
+import postgresqlIcon from "@/assets/img/postgresql.svg";
+import pythonIcon from "@/assets/img/python.svg";
+import tailwindIcon from "@/assets/img/tailwind-css.svg";
+import astroIcon from "@/assets/img/astro.svg";
+
+import { Image } from "astro:assets";
+---
+
+<div
+  class="w-full h-[4rem] bg-cardBackground"
+  style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"
+>
+</div>
+<section class="w-full bg-cardBackground py-[7rem]">
+  <ResponsiveLayout>
+    <div class="text-center">
+      <h1>Stack Tecnológico</h1>
+      <p class="text-paragraph">
+        Echa un vistazo a las tecnologías y frameworks que conforman el núcleo
+        de nuestros desarrollos web
+      </p>
+    </div>
+    <div class="mt-12 flex justify-center">
+      <ul
+        class="inline-grid grid-cols-2 gap-x-10 gap-y-6 md:gap-x-16 md:grid-cols-3 lg:grid-cols-4"
+      >
+        {/* LOGO 1 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={reactIcon} alt="React" class="w-14 my-auto" />
+          <h3 class="text-xl">React</h3>
+        </li>
+
+        {/* LOGO 2 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={reactIcon} alt="React" class="w-14 my-auto" />
+          <h3 class="text-xl">React Native</h3>
+        </li>
+
+        {/* LOGO 3 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={djangoIcon} alt="React" class="w-14 my-auto" />
+          <h3 class="text-xl">Django</h3>
+        </li>
+
+        {/* LOGO 4 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={nestjsIcon} alt="React" class="w-14 my-auto" />
+          <h3 class="text-xl">NestJs</h3>
+        </li>
+
+        {/* LOGO 5 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={nodejsIcon} alt="React" class="w-32 my-auto" />
+        </li>
+
+        {/* LOGO 6 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={postgresqlIcon} alt="React" class="w-14 my-auto" />
+          <h3 class="text-xl">PostgreSQL</h3>
+        </li>
+
+        {/* LOGO 7 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={pythonIcon} alt="React" class="w-32 my-auto" />
+        </li>
+
+        {/* LOGO 8 */}
+        <li class="flex items-center justify-center">
+          <Image
+            src="https://github.com/ultralytics/assets/raw/main/logo/Ultralytics_Logotype_Reverse.svg"
+            alt="Ultralytics"
+            width={150}
+            height={48}
+          />
+        </li>
+
+        {/* LOGO 9 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={tailwindIcon} alt="React" class="w-32 my-auto" />
+        </li>
+
+        {/* LOGO 10 */}
+        <li class="flex justify-center items-center gap-2">
+          <Image src={astroIcon} alt="React" class="w-32 my-auto" />
+        </li>
+      </ul>
+    </div>
+    <div
+      class="w-full h-[4rem] bg-cardBackground"
+      style="clip-path: polygon(100% 0, 0 0, 0 100%);"
+    >
+    </div>
+  </ResponsiveLayout>
+</section>
+
+<!-- fastapi typescript docker aws -->
