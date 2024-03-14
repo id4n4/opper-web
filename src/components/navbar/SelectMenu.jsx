@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const SelectMenu = ({
-  label,
-  items,
-  onChangeSelectedMenu,
-  menuSelected,
-}) => {
+export const SelectMenu = ({ label, items, menuSelected }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handlerOpen = () => setIsOpen((prev) => !prev);
   useEffect(() => {
@@ -43,7 +38,6 @@ export const SelectMenu = ({
                   href={href}
                   aria-label={ariaLabel}
                   className="py-2.5 px-4 rounded-lg duration-300 text-sm  hover:text-primary font-medium transition-all"
-                  onClick={() => onChangeSelectedMenu(id)}
                 >
                   {label}
                 </a>

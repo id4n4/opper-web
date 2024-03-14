@@ -1,6 +1,6 @@
 import { SelectMenu } from "./SelectMenu";
 
-export const Menu = ({ menuSelected, onChangeMenuSelected, navbarLinks }) => {
+export const Menu = ({ menuSelected, navbarLinks }) => {
   return (
     <div className="hidden lg:flex h-full pl-12 pb-2 gap">
       <ul className="w-full  flex items-center gap-x-3 overflow-x-auto">
@@ -18,7 +18,6 @@ export const Menu = ({ menuSelected, onChangeMenuSelected, navbarLinks }) => {
               <SelectMenu
                 items={children}
                 label={label}
-                onChangeSelectedMenu={onChangeMenuSelected}
                 menuSelected={menuSelected}
               />
             ) : (
@@ -26,7 +25,6 @@ export const Menu = ({ menuSelected, onChangeMenuSelected, navbarLinks }) => {
                 href={href}
                 aria-label={ariaLabel}
                 className="py-2.5 px-4 rounded-lg duration-300 text-sm  hover:bg-cardBackground font-medium transition-all"
-                onClick={() => onChangeMenuSelected(id)}
               >
                 {label}
               </a>

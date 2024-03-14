@@ -1,5 +1,5 @@
 // import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PATH } from "@/constants/paths";
 import { NavbarLogo } from "./NavbarLogo";
 import { Menu } from "./Menu";
@@ -37,22 +37,31 @@ const navbarLinks = [
   { id: 5, label: "Contacto", href: PATH.CONTACT, ariaLabel: "Contacto" },
 ];
 
+const getIdSelectedMenu = (pathname) => {
+  console.log(pathname);
+  const menu = navbarLinks.find((link) => link.href === pathname);
+  if (menu) return menu.id;
+  const subMenu = navbarLinks.find((link) =>
+    link.children?.some((child) => child.href === pathname)
+  );
+  if (subMenu)
+    return subMenu.children.find((child) => child.href === pathname).id;
+  return 1;
+};
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuSelected, setMenuSelected] = useState(1);
-  const changeMenu = (index) => {
-    setMenuSelected(index);
-  };
+
+  useEffect(() => {
+    setMenuSelected(getIdSelectedMenu(window.location.pathname));
+  }, []);
 
   return (
     <nav className="w-full h-20 flex flex-col justify-center items-center sticky top-0 bg-background lg:bg-background/80 z-40 lg:backdrop-blur-xl">
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <NavbarLogo />
-        <Menu
-          menuSelected={menuSelected}
-          onChangeMenuSelected={changeMenu}
-          navbarLinks={navbarLinks}
-        />
+        <Menu menuSelected={menuSelected} navbarLinks={navbarLinks} />
         <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       </div>
       {/* Mobile navbar */}
@@ -72,7 +81,6 @@ export const Navbar = () => {
         isOpen={isOpen}
         menuSelected={menuSelected}
         navbarLinks={navbarLinks}
-        onChangeMenuSelected={changeMenu}
       />
     </nav>
   );

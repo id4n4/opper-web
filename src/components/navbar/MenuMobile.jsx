@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export const MenuMobile = ({
-  navbarLinks,
-  menuSelected,
-  onChangeMenuSelected,
-  isOpen,
-  hideMenu,
-}) => {
-  const selectNewMenu = (id) => {
-    onChangeMenuSelected(id);
-    hideMenu();
-  };
+export const MenuMobile = ({ navbarLinks, menuSelected, isOpen, hideMenu }) => {
   return (
     <motion.div
       variants={{
@@ -50,7 +40,6 @@ export const MenuMobile = ({
               <SelectMenuMobile
                 items={children}
                 menuSelected={menuSelected}
-                onChangeMenuSelected={selectNewMenu}
                 label={label}
               />
             ) : (
@@ -58,7 +47,7 @@ export const MenuMobile = ({
                 href={href}
                 aria-label={ariaLabel}
                 className="py-2.5 px-4 rounded-lg duration-300 text-sm  hover:text-primary font-medium transition-all block w-full"
-                onClick={() => selectNewMenu(id)}
+                onClick={hideMenu}
               >
                 {label}
               </a>
@@ -70,12 +59,7 @@ export const MenuMobile = ({
   );
 };
 
-const SelectMenuMobile = ({
-  items,
-  onChangeMenuSelected,
-  menuSelected,
-  label,
-}) => {
+const SelectMenuMobile = ({ items, menuSelected, label }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handlerOpen = () => {
     setIsOpen((prev) => !prev);
@@ -111,7 +95,6 @@ const SelectMenuMobile = ({
               href={href}
               aria-label={ariaLabel}
               className="py-2.5 px-4 rounded-lg duration-300 text-sm  hover:text-primary font-medium transition-all block w-full"
-              onClick={() => onChangeMenuSelected(id)}
             >
               {label}
             </a>
