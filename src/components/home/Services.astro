@@ -1,0 +1,98 @@
+---
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import {
+  LuCodesandbox,
+  LuCircuitBoard,
+  LuBookOpenCheck,
+  LuBrainCircuit,
+  LuMonitor,
+  LuUsers,
+} from "react-icons/lu";
+import ServicesIcon from "@/components/iconos/ServiceIcons.astro";
+---
+
+<section class="py-[10rem]">
+  <ResponsiveLayout>
+    <div class="flex flex-col justify-center items-center text-center mb-20">
+      <h1>Servicios</h1>
+      <!-- <p class="text-paragraph w-1/2">
+        En el mundo empresarial de hoy, los datos son el activo más valioso. En
+        Opper, entendemos el potencial transformador que encierran tus datos. Es
+        por eso que ofrecemos una gama completa de servicios de análisis
+        diseñados para desbloquear insights significativos y guiar tus
+        decisiones empresariales hacia el éxito..
+      </p> -->
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-9 text-center">
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuCodesandbox />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">
+          Consultoria y desarrollo de modelos de sistemas
+        </h3>
+        <p>
+          Desarrollo de proyectos junto al cliente para validacion constante
+          (metodo agil)
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuCircuitBoard />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">Software</h3>
+        <p>
+          Los modelos de sistemas desarrollados pueden ser encapsulados en una
+          aplicación para modificar parámetros manualmente o por base de datos,
+          visualizar y analizar resultados.
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuBookOpenCheck />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">Gestion de conocimiento</h3>
+        <p>
+          Entrenamiento en el software desarrollado por OPPER en la carga de
+          datos y análisis de resultados para una óptima toma de decisiones
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuBrainCircuit />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">I + D + i</h3>
+        <p>
+          Realización de proyectos usando Business Intelligence e Inteligencia
+          artificial
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuMonitor />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">Opper Apps</h3>
+        <p>
+          Diseño y desarrollo de sistemas de información para la optimización de
+          la Producción y Logística con el uso de Inteligencia Artificial
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <ServicesIcon>
+          <LuUsers />
+        </ServicesIcon>
+        <h3 class="text-balance w-2/3">Asesorías y consultorías</h3>
+        <p>
+          Creación de soluciones a través de Analítica Avanzada para una mejor
+          toma de decisiones y optimización de procesos
+        </p>
+      </div>
+    </div>
+  </ResponsiveLayout>
+</section>
+
+<style>
+  p {
+    color: var(--paragraph);
+  }
+</style>

@@ -8,7 +8,7 @@ export const footerText = {
   opperState: 'Córdoba',
   opperCountry: 'Colombia',
   opperPhone: '+57 4 448 90 90',
-  opperEmail: 'indugarciaperez@gmail.com'
+  opperEmail: 'administracion@opper.com.co'
 
 }
 
@@ -18,7 +18,7 @@ export const footerLinks = {
 
 export const tools = [
   {id: 1, name: 'Opper Apps', href: PATH.OPPER_APPS},
-  {id: 2, name: 'TG', href: PATH.TG},
-  {id: 3, name: 'Herramientas de modelación', href: PATH.MODELING_TOOLS},
+  {id: 2, name: 'Tecnogan', href: PATH.TG},
+  // {id: 3, name: 'Herramientas de modelación', href: PATH.MODELING_TOOLS},
   {id: 4, name: 'Servicios', href: PATH.SERVICES},
 ]

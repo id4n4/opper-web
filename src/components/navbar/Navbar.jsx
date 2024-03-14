@@ -22,16 +22,16 @@ const navbarLinks = [
       },
       {
         id: 42,
-        label: "TG",
+        label: "Tecnogan",
         href: PATH.TG,
         ariaLabel: "Opper API",
       },
-      {
-        id: 43,
-        label: "Herramientas de modelación",
-        href: PATH.MODELING_TOOLS,
-        ariaLabel: "Herramientas de modelación",
-      },
+      // {
+      //   id: 43,
+      //   label: "Herramientas de modelación",
+      //   href: PATH.MODELING_TOOLS,
+      //   ariaLabel: "Herramientas de modelación",
+      // },
     ],
   },
   { id: 5, label: "Contacto", href: PATH.CONTACT, ariaLabel: "Contacto" },
