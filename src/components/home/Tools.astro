@@ -8,67 +8,80 @@ import { LuArrowRight } from "react-icons/lu";
 ---
 
 <section class="py-[5rem]">
-  <ResponsiveLayout>
-    <h1 class="text-4xl text-center mb-[2rem]">Principales Productos</h1>
-    <!-- Opper -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center mb-3">
-      <div class="space-y-3">
-        <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
-          Optimiza tu negocio con <b>Opper Apps</b>
-        </h2>
-        <p class="text-lg">
-          Una suite de herramientas tipo SAAS enfocada en la optimización de
-          procesos empresariales. Ofrece pronóstico de demanda, gestión de
-          inventarios, y ruteo de vehículos.
-        </p>
-        <p class="text-lg">
-          Incluye también un sistema administrativo para el control de ventas y
-          compras, facturación electrónica, punto POS, y manejo contable.
-        </p>
-        <div
-          class="hover:scale-110 transition-all duration-300 w-max text-primary"
-        >
-          <a href={PATH.OPPER_APPS} aria-label="opperapps">
-            Saber más
-            <LuArrowRight className="inline" />
-          </a>
+  <div
+    class="w-full h-[6rem] bg-cardBackground"
+    style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"
+  >
+  </div>
+  <div class="bg-cardBackground">
+    <ResponsiveLayout>
+      <h1 class="text-4xl text-center mb-[2rem]">Principales Productos</h1>
+      <!-- Opper -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center mb-3">
+        <div class="space-y-3">
+          <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
+            Optimiza tu negocio con <b>Opper Apps</b>
+          </h2>
+          <p class="text-lg">
+            Una suite de herramientas tipo SAAS enfocada en la optimización de
+            procesos empresariales. Ofrece pronóstico de demanda, gestión de
+            inventarios, y ruteo de vehículos.
+          </p>
+          <p class="text-lg">
+            Incluye también un sistema administrativo para el control de ventas
+            y compras, facturación electrónica, punto POS, y manejo contable.
+          </p>
+          <div
+            class="hover:scale-110 transition-all duration-300 w-max text-primary"
+          >
+            <a href={PATH.OPPER_APPS} aria-label="opperapps">
+              Saber más
+              <LuArrowRight className="inline" />
+            </a>
+          </div>
+        </div>
+        <div>
+          <Image src={browserOpperApps} alt="OpperApps" />
         </div>
       </div>
-      <div>
-        <Image src={browserOpperApps} alt="OpperApps" />
-      </div>
-    </div>
-    <div class="w-full h-[.5px] bg-gray-700 md:hidden"></div>
-    <!-- Tecnogan -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-      <div>
-        <Image src={browserTecnogan} alt="Tecnogan" />
-      </div>
-      <div class="space-y-3">
-        <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
-          Potencia tu ganadería con <b>Tecnogan</b>
-        </h2>
-        <p class="text-lg">
-          Una plataforma AgroTech con inteligencia artificial diseñada para
-          mejorar la rentabilidad de las operaciones ganaderas.
-        </p>
-        <p class="text-lg">
-          Integra dispositivos RFID y drones para el seguimiento y monitoreo
-          avanzado del ganado, ofreciendo soluciones para la localización
-          precisa, inventario bovino, y la recopilación de datos relevantes
-          sobre su salud y bienestar.
-        </p>
-        <div
-          class="hover:scale-110 transition-all duration-300 w-max text-primary"
-        >
-          <a href={PATH.TG} aria-label="opperapps">
-            Saber más
-            <LuArrowRight className="inline" />
-          </a>
+      <div class="w-full h-[.5px] bg-gray-700 md:hidden"></div>
+      <!-- Tecnogan -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+        <div>
+          <Image src={browserTecnogan} alt="Tecnogan" />
+        </div>
+        <div class="space-y-3">
+          <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
+            Potencia tu ganadería con <b>Tecnogan</b>
+          </h2>
+          <p class="text-lg">
+            Una plataforma AgroTech con inteligencia artificial diseñada para
+            mejorar la rentabilidad de las operaciones ganaderas.
+          </p>
+          <p class="text-lg">
+            Integra dispositivos RFID y drones para el seguimiento y monitoreo
+            avanzado del ganado, ofreciendo soluciones para la localización
+            precisa, inventario bovino, y la recopilación de datos relevantes
+            sobre su salud y bienestar.
+          </p>
+          <div
+            class="hover:scale-110 transition-all duration-300 w-max text-primary"
+          >
+            <a href={PATH.TG} aria-label="opperapps">
+              Saber más
+              <LuArrowRight className="inline" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </ResponsiveLayout>
+    </ResponsiveLayout>
+  </div>
+
+  <div
+    class="w-full h-[6rem] bg-cardBackground"
+    style="clip-path: polygon(100% 0, 0 0, 0 100%);"
+  >
+  </div>
 </section>
 
 <style>
