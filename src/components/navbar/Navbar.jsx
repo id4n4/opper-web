@@ -58,7 +58,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full h-20 flex flex-col justify-center items-center sticky top-0 bg-background lg:bg-background/80 z-40 lg:backdrop-blur-xl">
+    <nav className="w-full h-20 flex flex-col justify-center items-center sticky top-0 bg-background lg:bg-background/60 z-40 lg:backdrop-blur-xl">
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <NavbarLogo />
         <Menu menuSelected={menuSelected} navbarLinks={navbarLinks} />
