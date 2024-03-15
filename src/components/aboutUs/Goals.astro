@@ -1,0 +1,43 @@
+---
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import { LuArrowUpNarrowWide, LuPuzzle } from "react-icons/lu";
+---
+
+<section class="py-[7rem]">
+  <ResponsiveLayout>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <!-- MISION -->
+      <div
+        class="flex flex-col justify-center gap-2 bg-cardBackground p-10 rounded-xl"
+      >
+        <div class="flex items-center gap-2">
+          <div class="flex items-center p-4 rounded bg-primary">
+            <LuPuzzle className="text-5xl text-primary-500 " />
+          </div>
+          <h2 class="text-3xl font-bold">Misión</h2>
+        </div>
+        <p class="text-lg">
+          Brindar soluciones inteligentes haciendo uso de la combinación de la
+          tecnología y el uso de datos para optimizar y hacer más eficientes los
+          procesos de nuestros clientes.
+        </p>
+      </div>
+      <!-- VISION -->
+      <div
+        class="flex flex-col justify-center gap-2 bg-cardBackground p-10 rounded-xl"
+      >
+        <div class="flex items-center gap-2">
+          <div class="flex items-center p-4 rounded bg-primary">
+            <LuArrowUpNarrowWide className="text-5xl text-primary-500 " />
+          </div>
+          <h2 class="text-3xl font-bold">Visión</h2>
+        </div>
+        <p class="text-lg">
+          Para el año 2025 Opper busca ser un actor importante en el caribe
+          colombiano, reconocido como empresa innovadora en el uso de analítica
+          avanzada.
+        </p>
+      </div>
+    </div>
+  </ResponsiveLayout>
+</section>
