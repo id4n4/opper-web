@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+---
+
+<section class="bg-cardBackground rounded-br-full relative">
+  <Image
+    src="/img/logoV2.png"
+    alt="Astro Logo"
+    width={1000}
+    height={1000}
+    class="mx-auto"
+  />
+  <div
+    class="absolute top-0 h-full w-full bg-background/80 backdrop-blur-sm rounded-br-full flex items-center justify-center"
+  >
+    <ResponsiveLayout>
+      <div class="space-y-2 h-full w-2/3">
+        <h3 class="text-primary">Sobre nosotros</h3>
+        <h1 class="text-5xl font-bold text-pretty">
+          Optimum Performance S.A.S.
+        </h1>
+        <p class="text-paragraph text-xl">
+          Empresa dedicada a proporcionar soluciones tecnológicas avanzadas y
+          servicios de consultoría para optimizar la toma de decisiones en los
+          niveles estratégico, táctico y operacional
+        </p>
+      </div>
+    </ResponsiveLayout>
+  </div>
+</section>
