@@ -1,0 +1,51 @@
+---
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import ValueItem from "./ValueItem.astro";
+import { HiRocketLaunch, HiTrophy } from "react-icons/hi2";
+import { FaHandshake, FaPrayingHands, FaShieldAlt } from "react-icons/fa";
+import { RiPlantFill } from "react-icons/ri";
+---
+
+<section class="pb-[7rem]">
+  <ResponsiveLayout>
+    <h1 class="text-center mb-3">Nuestros Valores</h1>
+    <div
+      class="grid"
+      style={{
+        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+        gap: "1rem",
+      }}
+    >
+      <ValueItem
+        Icon={HiRocketLaunch}
+        title="Innovación"
+        description="Buscamos constantemente nuevas soluciones tecnológicas para optimizar procesos y resultados."
+      />
+      <ValueItem
+        Icon={HiTrophy}
+        title="Excelencia"
+        description="Nos esforzamos por superar las expectativas y garantizar la calidad en todo momento."
+      />
+      <ValueItem
+        Icon={FaHandshake}
+        title="Compromiso con el cliente"
+        description="Priorizamos la satisfacción del cliente adaptando soluciones para cumplir con sus necesidades."
+      />
+      <ValueItem
+        Icon={FaShieldAlt}
+        title="Integridad"
+        description="Actuamos con honestidad y transparencia en todas nuestras operaciones y relaciones comerciales."
+      />
+      <ValueItem
+        Icon={FaPrayingHands}
+        title="Colaboración"
+        description="Trabajamos en equipo con nuestros clientes y socios para lograr objetivos comunes."
+      />
+      <ValueItem
+        Icon={RiPlantFill}
+        title="Responsabilidad"
+        description="Nos comprometemos a operar de manera responsable, minimizando nuestro impacto ambiental y contribuyendo positivamente."
+      />
+    </div>
+  </ResponsiveLayout>
+</section>

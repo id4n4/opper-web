@@ -1,0 +1,19 @@
+---
+import { type FC } from "react";
+
+interface Props {
+  Icon: FC;
+  title: string;
+  description: string;
+}
+const { Icon, description, title } = Astro.props;
+---
+
+<div class="bg-cardBackground rounded-xl p-5 text-center">
+  <div class="text-primary text-6xl flex justify-center py-10">
+    <Icon />
+  </div>
+  <h3 class="font-bold">{title}</h3>
+  <div class="h-1 w-1/2 mx-auto my-5 bg-primary"></div>
+  <p class="text-pretty">{description}</p>
+</div>
