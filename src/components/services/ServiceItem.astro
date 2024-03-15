@@ -1,0 +1,55 @@
+---
+import { type FC } from "react";
+import { FaCircleCheck } from "react-icons/fa6";
+import ServicesIcon from "@/components/iconos/ServiceIcons.astro";
+
+interface Props {
+  Icon: FC;
+  title: string;
+  description: string;
+  list: string[];
+}
+
+const { Icon, title, description, list } = Astro.props;
+---
+
+<div class="bg-cardBackground p-10 rounded-lg mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+    <div class="space-y-3 md:border-r-2 border-background">
+      <div class="flex items-center">
+        <ServicesIcon>
+          <Icon />
+        </ServicesIcon>
+        <h3 class="text-pretty w-2/3 text-xl">
+          {title}
+        </h3>
+      </div>
+      <p>
+        {description}
+      </p>
+    </div>
+    <div>
+      <ul class="space-y-2">
+        {
+          list.map((item) => (
+            <li>
+              <FaCircleCheck className="text-primary" />
+              <h3>{item}</h3>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  p {
+    color: var(--paragraph);
+  }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
