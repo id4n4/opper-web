@@ -7,18 +7,20 @@ import { PATH } from "@/constants/paths";
 import { LuArrowRight } from "react-icons/lu";
 ---
 
-<section class="py-[5rem]">
+<section>
   <div
     class="w-full h-[6rem] bg-cardBackground"
     style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"
   >
   </div>
-  <div class="bg-cardBackground">
+  <div class="bg-cardBackground py-[5rem]">
     <ResponsiveLayout>
-      <h1 class="text-4xl text-center mb-[2rem]">Principales Productos</h1>
-      <!-- Opper -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center mb-3">
-        <div class="space-y-3">
+      <h1 class="text-4xl text-center mb-[3rem] uppercase">
+        Principales Productos
+      </h1>
+      <!-- Opperapp -->
+      <div class="flex flex-wrap md:flex-nowrap gap-2 items-center mb-3">
+        <div class="space-y-3 md:w-1/2">
           <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
             Optimiza tu negocio con <b>Opper Apps</b>
           </h2>
@@ -40,17 +42,16 @@ import { LuArrowRight } from "react-icons/lu";
             </a>
           </div>
         </div>
-        <div>
+        <div class="md:w-1/2">
           <Image src={browserOpperApps} alt="OpperApps" />
         </div>
       </div>
-      <div class="w-full h-[.5px] bg-gray-700 md:hidden"></div>
+      <div class="w-full h-[.5px] bg-gray-700 md:hidden mb-16"></div>
       <!-- Tecnogan -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-        <div>
-          <Image src={browserTecnogan} alt="Tecnogan" />
-        </div>
-        <div class="space-y-3">
+      <div
+        class="flex flex-wrap md:flex-nowrap gap-2 md:flex-row-reverse items-center"
+      >
+        <div class="space-y-3 md:w-1/2">
           <h2 class="text-2xl font-bold w-3/4 lg:w-1/2 text-pretty">
             Potencia tu ganadería con <b>Tecnogan</b>
           </h2>
@@ -72,6 +73,9 @@ import { LuArrowRight } from "react-icons/lu";
               <LuArrowRight className="inline" />
             </a>
           </div>
+        </div>
+        <div class="sm:col-start-1 md:w-1/2">
+          <Image src={browserTecnogan} alt="Tecnogan" />
         </div>
       </div>
     </ResponsiveLayout>

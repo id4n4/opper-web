@@ -3,14 +3,16 @@ import { Image } from "astro:assets";
 import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
 ---
 
-<section class="bg-cardBackground rounded-br-full relative">
-  <Image
-    src="/img/logoV2.png"
-    alt="Astro Logo"
-    width={1000}
-    height={1000}
-    class="mx-auto"
-  />
+<section class="bg-cardBackground rounded-br-full relative h-[500px] lg:h-auto">
+  <div class="w-[90%]">
+    <Image
+      src="/img/logoV2.png"
+      alt="Astro Logo"
+      width={1000}
+      height={1000}
+      class="mx-auto object-cover"
+    />
+  </div>
   <div
     class="absolute top-0 h-full w-full bg-background/80 backdrop-blur-sm rounded-br-full flex items-center justify-center"
   >

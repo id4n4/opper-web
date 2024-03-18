@@ -18,7 +18,7 @@ export const MenuMobile = ({ navbarLinks, menuSelected, isOpen, hideMenu }) => {
           transition: {
             type: "spring",
             bounce: 0,
-            duration: 0.3,
+            duration: 0.1,
           },
         },
       }}
