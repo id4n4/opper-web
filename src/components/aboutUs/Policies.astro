@@ -1,10 +1,13 @@
 ---
 import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import policiesImage from "@/assets/img/policies-min.png";
+import { Image } from "astro:assets";
 ---
 
 <section class="pb-[7rem]">
   <ResponsiveLayout>
     <div class="md:w-2/3 mx-auto space-y-2">
+      <Image src={policiesImage} alt="Políticas" class="w-1/2 mx-auto" />
       <h1 class="text-4xl font-bold text-center">Políticas</h1>
       <p class="text-justify">
         Opper (Optimum Performance) se compromete a ofrecer soluciones
