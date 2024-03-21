@@ -1,15 +1,17 @@
 ---
 import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
 import dashboardImage from "@/assets/img/browser_tg.png";
-import animalsImage from "@/assets/img/browser_tg2_animals.png";
-import localitationImage from "@/assets/img/browser_tg3_localitation.png";
-import healthyImage from "@/assets/img/browser_tg4_healthy.png";
+import animalsImage from "@/assets/img/tg4_Animales-min.jpeg";
+import localitationImage from "@/assets/img/tg2.jpeg";
+import healthyImage from "@/assets/img/tg1.jpeg";
 import { Image } from "astro:assets";
 import {
   LuActivitySquare,
   LuClipboardList,
   LuLocateFixed,
 } from "react-icons/lu";
+
+import FunctionalityItem from "./FunctionalityItem.astro";
 ---
 
 <section class="bg-cardBackground py-[10rem]">
@@ -37,66 +39,25 @@ import {
       <h1 class="text-center bg-primary rounded-md">Principales Modulos</h1>
     </div>
 
-    <section
-      class="mx-auto max-w-screen-xl px-4 items-center lg:flex lg:flex-row-reverse md:px-8"
-    >
-      <div class="space-y-4 flex-1 sm:text-center lg:text-left">
-        <div
-          class="font-bold text-4xl xl:text-5xl text-pretty flex gap-2 items-end"
-        >
-          <LuClipboardList />
-          <h1 class="text-primary">Gestión</h1>
-        </div>
-        <p class="max-w-xl leading-relaxed sm:mx-auto lg:ml-0">
-          Desde el seguimiento detallado de la genealogía hasta el registro
-          financiero y la gestión de actividades, este nuevo módulo te
-          proporciona todas las herramientas necesarias para optimizar tu
-          operación ganadera en un solo lugar.
-        </p>
-      </div>
-      <div class="flex-1 mt-4 lg:mt-0 lg:ml-3">
-        <Image src={animalsImage} alt="Animals" class="w-full" />
-      </div>
-    </section>
-    <section class="mx-auto max-w-screen-xl px-4 items-center lg:flex md:px-8">
-      <div class="space-y-4 flex-1 sm:text-center lg:text-left">
-        <div
-          class="font-bold text-4xl xl:text-5xl text-pretty flex items-end gap-2"
-        >
-          <LuLocateFixed />
-          <h1 class="text-primary">Localización</h1>
-        </div>
-        <p class="max-w-xl leading-relaxed sm:mx-auto lg:ml-0">
-          Realizamos un análisis sincrónico utilizando cámaras y drones para
-          monitorear la salud del ganado en tiempo real. Además, ofrecemos la
-          opción de análisis asíncrono, donde puedes subir imágenes para un
-          diagnóstico detallado y preciso de la salud de tus animales.
-        </p>
-      </div>
-      <div class="flex-1 mt-4 lg:mt-0 lg:ml-3">
-        <Image src={localitationImage} alt="Animals" class="w-full" />
-      </div>
-    </section>
-    <section
-      class="mx-auto max-w-screen-xl px-4 items-center lg:flex lg:flex-row-reverse md:px-8"
-    >
-      <div class="space-y-4 flex-1 sm:text-center lg:text-left">
-        <div
-          class="font-bold text-4xl xl:text-5xl text-pretty flex items-end gap-2"
-        >
-          <LuActivitySquare />
-          <h1 class="text-primary">Salud</h1>
-        </div>
-        <p class="max-w-xl leading-relaxed sm:mx-auto lg:ml-0">
-          Desde el seguimiento detallado de la genealogía hasta el registro
-          financiero y la gestión de actividades, este nuevo módulo te
-          proporciona todas las herramientas necesarias para optimizar tu
-          operación ganadera en un solo lugar.
-        </p>
-      </div>
-      <div class="flex-1 mt-4 lg:mt-0 lg:ml-3">
-        <Image src={healthyImage} alt="Animals" class="w-full" />
-      </div>
-    </section>
+    <FunctionalityItem
+      Icon={LuClipboardList}
+      title="Gestión"
+      description="Desde el seguimiento detallado de la genealogía hasta el registro financiero y la gestión de actividades, este nuevo módulo te proporciona todas las herramientas necesarias para optimizar tu operación ganadera en un solo lugar."
+      image={animalsImage}
+    />
+    <br />
+    <FunctionalityItem
+      Icon={LuLocateFixed}
+      title="Localización"
+      description="Realizamos un análisis sincrónico utilizando cámaras y drones para monitorear la salud del ganado en tiempo real. Además, ofrecemos la opción de análisis asíncrono, donde puedes subir imágenes para un diagnóstico detallado y preciso de la salud de tus animales."
+      image={localitationImage}
+    />
+    <br />
+    <FunctionalityItem
+      Icon={LuActivitySquare}
+      title="Salud"
+      description="Desde el seguimiento detallado de la genealogía hasta el registro financiero y la gestión de actividades, este nuevo módulo te proporciona todas las herramientas necesarias para optimizar tu operación ganadera en un solo lugar."
+      image={healthyImage}
+    />
   </ResponsiveLayout>
 </section>
