@@ -12,7 +12,10 @@ import {
   service3List,
 } from "@/data/servicesData.ts";
 import ServiceItem from "./ServiceItem.astro";
-
+import service1Image from "@/assets/img/service1-min.png";
+import service2Image from "@/assets/img/service2-min.png";
+import service3Image from "@/assets/img/service3-min.png";
+import service4Image from "@/assets/img/service4-min.png";
 // inspiration: https://flowbite.com/blocks/marketing/feature/
 ---
 
@@ -24,6 +27,7 @@ import ServiceItem from "./ServiceItem.astro";
       Icon={LuCodesandbox}
       description="Servicios integrales de consultoría y desarrollo que van desde la identificación de necesidades y el diseño de soluciones hasta la implementación y validación continua de sistemas y modelos, todo ello en colaboración estrecha con el cliente y siguiendo metodologías ágiles para garantizar la máxima eficiencia y satisfacción del cliente."
       list={service1List}
+      image={service1Image}
     />
     <!-- SERVICE 2 -->
     <ServiceItem
@@ -31,6 +35,7 @@ import ServiceItem from "./ServiceItem.astro";
       Icon={LuCircuitBoard}
       description="Servicios de desarrollo de software para encapsular los modelos de sistemas en aplicaciones personalizadas que permiten la modificación de parámetros, la visualización y el análisis de resultados. Estas aplicaciones se diseñan para ser intuitivas y fáciles de usar, y pueden integrarse con los sistemas existentes del cliente según sea necesario."
       list={service2List}
+      image={service2Image}
     />
     <!-- SERVICE 3 -->
     <ServiceItem
@@ -38,6 +43,7 @@ import ServiceItem from "./ServiceItem.astro";
       Icon={LuBookOpenCheck}
       description="Servicios de gestión del conocimiento que incluyen capacitación personalizada en el software desarrollado, centrándose en la carga de datos, el análisis de resultados y la toma de decisiones óptimas. Esta capacitación se ofrece con materiales de apoyo, enfoque en la toma de decisiones estratégicas y soporte continuo para garantizar que los usuarios puedan utilizar eficazmente el software y maximizar su valor en su organización."
       list={service3List}
+      image={service3Image}
     />
     <!-- SERVICE 4 -->
     <ServiceItem
@@ -45,6 +51,7 @@ import ServiceItem from "./ServiceItem.astro";
       Icon={LuBrainCircuit}
       description="Servicios que incluyen la formulación y ejecución de proyectos que utilizan Business Intelligence e Inteligencia Artificial para resolver problemas específicos, mejorar la eficiencia operativa y generar valor para el cliente. Estos proyectos se diseñan para aprovechar al máximo las tecnologías emergentes y están respaldados por un enfoque de mejora continua para garantizar su éxito a largo plazo."
       list={service1List}
+      image={service4Image}
     />
   </ResponsiveLayout>
 </section>
