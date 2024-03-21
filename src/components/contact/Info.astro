@@ -1,0 +1,57 @@
+---
+import { footerText } from "@/data/footerData";
+import { LuMail, LuMapPin } from "react-icons/lu";
+
+const contactMethods = [
+  {
+    Icon: LuMapPin,
+    contact:
+      footerText.opperAddress +
+      ", " +
+      footerText.opperCity +
+      ", " +
+      footerText.opperCountry,
+    title: "Nuestras oficinas",
+  },
+  {
+    Icon: LuMail,
+    contact: footerText.opperEmail,
+    title: "Email",
+  },
+];
+---
+
+<main>
+  <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div class="max-w-xl space-y-3">
+      <h3 class="text-primary font-semibold">Contacto</h3>
+      <p class="text-headline text-3xl font-semibold sm:text-4xl">
+        Háganos saber cómo podemos ayudar
+      </p>
+      <p>
+        Estamos aquí para ayudarlo y responder cualquier pregunta que pueda
+        tener. ¡Esperamos tener noticias suyas! Complete el formulario o
+        envíenos la información de contacto a continuación.
+      </p>
+    </div>
+    <div>
+      <ul
+        class="mt-12 flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24"
+      >
+        {
+          contactMethods.map(({ title, contact, Icon }) => (
+            <li>
+              <h4 class="text-headline text-lg font-medium">{title}</h4>
+              <div class="mt-3 flex items-center gap-x-3">
+                <div class="flex-none text-primary">
+                  <Icon />
+                </div>
+                <p>{contact}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</main>
