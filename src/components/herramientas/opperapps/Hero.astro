@@ -1,0 +1,42 @@
+---
+import ResponsiveLayout from "@/layouts/ResponsiveLayout.astro";
+import heroImage from "@/assets/img/Opper-Hero-min.png";
+import { Image } from "astro:assets";
+---
+
+<section>
+  <ResponsiveLayout>
+    <div class="flex flex-col md:items-center gap-5">
+      <div class="space-y-5 md:max-w-[70%] text-pretty md:text-center">
+        <h1 class="font-extrabold mx-auto xl:w-1/2">
+          Optimiza tu Empresa con <b>Opper Apps</b>
+        </h1>
+        <p>
+          Una suite de herramientas tipo SAAS enfocada en la optimización de
+          procesos empresariales. Facilitamos la eficiencia operativa y
+          estratégica de empresas mediante soluciones innovadoras
+        </p>
+      </div>
+    </div>
+  </ResponsiveLayout>
+  <div class="bg-cardBackground relative mt-[5rem] z-0">
+    <div class="rounded-xl overflow-hidden md:w-1/2 mx-auto z-10 relative">
+      <Image
+        src={heroImage}
+        alt="Opper hero"
+        class="object-cover h-full w-full"
+      />
+    </div>
+    <div
+      style="clip-path: polygon(50% 100%, 0 0, 100% 0);"
+      class="bg-background h-1/2 w-full absolute top-0 -z-10"
+    >
+    </div>
+  </div>
+</section>
+
+<style>
+  b {
+    color: var(--primary);
+  }
+</style>
