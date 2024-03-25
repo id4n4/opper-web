@@ -42,7 +42,7 @@ export const FormContact = () => {
         ></textarea>
       </div>
       <button className="w-full px-4 py-2 text-white font-medium bg-primary hover:bg-primary/70 active:bg-indigo-600 rounded-lg duration-150">
-        Submit
+        Enviar
       </button>
     </form>
   );
