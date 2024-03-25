@@ -12,7 +12,7 @@ export const Menu = ({ menuSelected, navbarLinks }) => {
               children?.some((c) => c.id === menuSelected)
                 ? "border-b-2 border-primary text-headline"
                 : "text-paragraph"
-            } ${children?.length ? "" : "py-2"}`}
+            }`}
           >
             {children?.length ? (
               <SelectMenu
@@ -21,12 +21,10 @@ export const Menu = ({ menuSelected, navbarLinks }) => {
                 menuSelected={menuSelected}
               />
             ) : (
-              <a
-                href={href}
-                aria-label={ariaLabel}
-                className="py-2.5 px-4 rounded-lg duration-300 text-sm  hover:bg-cardBackground font-medium transition-all"
-              >
-                {label}
+              <a href={href} aria-label={ariaLabel}>
+                <div className="py-2 px-4 rounded-lg duration-300 text-sm  hover:bg-cardBackground font-medium transition-all">
+                  {label}
+                </div>
               </a>
             )}
           </li>
