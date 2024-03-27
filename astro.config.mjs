@@ -5,6 +5,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://opper.com.co',
+  base: '/opper-page',
   integrations: [tailwind(), react()],
 });
