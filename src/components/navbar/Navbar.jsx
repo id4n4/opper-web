@@ -1,6 +1,6 @@
 // import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { PATH } from "@/constants/paths";
+import { PATH } from "../../constants/paths";
 import { NavbarLogo } from "./NavbarLogo";
 import { Menu } from "./Menu";
 import { MenuToggle } from "./MenuToggle";

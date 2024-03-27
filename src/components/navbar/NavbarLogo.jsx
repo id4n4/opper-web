@@ -1,4 +1,4 @@
-import { PATH } from "@/constants/paths";
+import { PATH } from "../../constants/paths";
 
 export const NavbarLogo = () => {
   return (

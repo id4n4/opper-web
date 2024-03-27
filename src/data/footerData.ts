@@ -1,4 +1,4 @@
-import { PATH } from "@/constants/paths"
+import { PATH } from "../constants/paths"
 
 export const footerText = {
   opperDescription: 'Nace para brindar al mercado Colombiano soporte tecnológico y de consultoría para la toma de decisiones a nivel estratégico, táctico y operacional.',
