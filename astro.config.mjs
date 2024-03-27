@@ -5,7 +5,5 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://id4n4.github.io',
-  base: 'opper-page',
   integrations: [tailwind(), react()],
 });
