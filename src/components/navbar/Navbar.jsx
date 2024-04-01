@@ -38,6 +38,10 @@ const navbarLinks = [
 ];
 
 const getIdSelectedMenu = (pathname) => {
+  // revisar que el pathname no termine en /
+  if (pathname[pathname.length - 1] === "/")
+    pathname = pathname.substring(0, pathname.length - 1);
+  //
   console.log(pathname);
   const menu = navbarLinks.find((link) => link.href === pathname);
   if (menu) return menu.id;
