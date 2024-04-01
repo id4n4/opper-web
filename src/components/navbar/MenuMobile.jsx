@@ -67,7 +67,7 @@ const SelectMenuMobile = ({ items, menuSelected, label }) => {
   return (
     <>
       <button
-        className="py-2 px-4 rounded-lg duration-300 text-sm hover:bg-cardBackground font-medium transition-all w-full text-start"
+        className="py-2 px-4 rounded-lg duration-300 text-sm hover:bg-cardBackground hover:text-primary font-medium transition-all w-full text-start"
         onClick={handlerOpen}
       >
         <h3>{label}</h3>
@@ -77,7 +77,7 @@ const SelectMenuMobile = ({ items, menuSelected, label }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
-        className=" bg-cardBackground z-50 w-full px-10 flex flex-col gap-2 rounded-lg overflow-hidden duration-300 transition-all"
+        className="bg-cardBackground z-50 w-full px-10 flex flex-col gap-2 rounded-lg overflow-hidden duration-300 transition-all"
         style={{
           maxHeight: isOpen ? `500px` : "0px",
         }}

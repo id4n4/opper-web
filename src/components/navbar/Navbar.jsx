@@ -42,7 +42,6 @@ const getIdSelectedMenu = (pathname) => {
   if (pathname[pathname.length - 1] === "/")
     pathname = pathname.substring(0, pathname.length - 1);
   //
-  console.log(pathname);
   const menu = navbarLinks.find((link) => link.href === pathname);
   if (menu) return menu.id;
   const subMenu = navbarLinks.find((link) =>
@@ -66,7 +65,7 @@ export const Navbar = () => {
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <NavbarLogo />
         <Menu menuSelected={menuSelected} navbarLinks={navbarLinks} />
-        <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+        <MenuToggle toggle={() => setIsOpen(prev => !prev)} isOpen={isOpen ?? false} />
       </div>
       {/* Mobile navbar */}
       {/* <AnimatePresence>
@@ -82,7 +81,7 @@ export const Navbar = () => {
       </AnimatePresence> */}
       <MenuMobile
         hideMenu={() => setIsOpen(false)}
-        isOpen={isOpen}
+        isOpen={isOpen ?? false}
         menuSelected={menuSelected}
         navbarLinks={navbarLinks}
       />

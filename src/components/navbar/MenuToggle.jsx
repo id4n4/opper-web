@@ -17,14 +17,15 @@ export const MenuToggle = ({ toggle, isOpen }) => (
   >
     <svg width="23" height="23" viewBox="0 0 20 20">
       <Path
+        d="m 2 2 L 18 2"
         variants={{
-          closed: { d: "M 2 2 L 18 2", transition: { duration: 0.1 } },
-          open: { d: "M 2 18 L 18 2" },
+          closed: { d: "m 2 2 L 18 2", transition: { duration: 0.1 } },
+          open: { d: "m 2 18 L 18 2" },
         }}
         animate={isOpen ? "open" : "closed"}
       />
       <Path
-        d="M 2 10 L 18 10"
+        d="m 2 10 L 18 10"
         variants={{
           closed: { opacity: 1 },
           open: { opacity: 0 },
@@ -33,9 +34,10 @@ export const MenuToggle = ({ toggle, isOpen }) => (
         animate={isOpen ? "open" : "closed"}
       />
       <Path
+        d="m 2 18 L 18 18"
         variants={{
-          closed: { d: "M 2 18 L 18 18", transition: { duration: 0.1 } },
-          open: { d: "M 2 2 L 18 18" },
+          closed: { d: "m 2 18 L 18 18", transition: { duration: 0.1 } },
+          open: { d: "m 2 2 L 18 18" },
         }}
         animate={isOpen ? "open" : "closed"}
       />
