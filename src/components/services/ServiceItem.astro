@@ -34,9 +34,13 @@ const { Icon, title, description, list, image } = Astro.props;
         <ul class="space-y-2">
           {
             list.map((item) => (
-              <li>
-                <FaCircleCheck className="text-primary" />
-                <h3>{item}</h3>
+              <li class="grid grid-cols-5 ">
+                <div>
+                  <FaCircleCheck className="text-primary text-xl" />
+                </div>
+                <div class="col-span-4">
+                  <h3>{item}</h3>
+                </div>
               </li>
             ))
           }
