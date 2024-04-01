@@ -7,6 +7,6 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), react()],
   build: {
-    format: "file",
+    format: "preserve",
   }
 });
