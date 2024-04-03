@@ -3,7 +3,7 @@
 export const service1List = [
   "Evaluación de las necesidades del cliente",
   "Análisis de procesos",
-  "Diseño de luciones personalizadas",
+  "Diseño de soluciones personalizadas",
   "Metodología ágil",
   "Entrega iterativa",
   "Validación continua",
@@ -13,7 +13,7 @@ export const service1List = [
 // SOFTWARE
 export const service2List = [
   "Diseño de aplicaciones personalizadas",
-  "Funcionalidades de modificación de parámetros",
+  "Funcionalidades para modificar parámetros",
   "Visualización y análisis de resultados",
   "Interfaz intuitiva y fácil de usar",
   "Integración con sistemas existentes",
@@ -26,7 +26,7 @@ export const service3List = [
   "Formación técnica y operativa",
   "Tutorial y materiales de apoyo",
   "Enfoque en la toma de decisiones",
-  "Soporte continuo continua",
+  "Soporte continuo",
 ];
 
 // I + D + i

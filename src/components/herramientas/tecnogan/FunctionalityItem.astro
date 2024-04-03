@@ -13,13 +13,13 @@ const { Icon, description, image, title } = Astro.props;
 
 <section class="relative rounded-lg overflow-hidden p-1">
   <div
-    class="md:absolute inset-0 md:bg-gradient-to-t from-cardBackground from-5% to-transparent md:px-10 py-10 flex flex-col items-start justify-end gap-2"
+    class="md:absolute inset-0 md:bg-gradient-to-t from-cardBackground from-10% to-transparent md:px-10 py-10 flex flex-col items-start justify-end gap-2"
   >
     <div
       class="font-bold text-4xl xl:text-5xl text-center lg:text-pretty flex gap-2 items-end"
     >
       <Icon />
-      <h1 class="text-primary m-0">{title}</h1>
+      <h1 class="text-primary m-0 stroke-black">{title}</h1>
     </div>
     <p class="text-main md:w-1/2">
       {description}
